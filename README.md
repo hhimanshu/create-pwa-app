@@ -11,7 +11,7 @@
 - `yarn start` to develop locally.
 - `yarn test` to test and see the code coverage.
 - `yarn build` to create a production build.
-- `npx serve dist` to serve production build on port `5000`.
+- `npx -y serve dist` to serve production build on port `5000`.
 - `yarn storybook` to start storybook in development mode.
 - `yarn build-storybook` to create production build for storybook.
-- `npx serve storybook-static -l 5858` to serve production build for storybook on port `5858`.
+- `npx -y serve storybook-static -l 5858` to serve production build for storybook on port `5858`.
