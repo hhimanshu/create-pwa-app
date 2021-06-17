@@ -4,36 +4,40 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: './src/index.tsx',
+    index: './src/index.tsx'
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
-    }),
+      template: path.join(__dirname, 'src', 'index.html')
+    })
   ],
   output: {
     filename: '[name].[contenthash].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)/i,
         use: ['ts-loader'],
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.ttf$/i,
-        type: 'asset/resource',
+        type: 'asset/resource'
       },
-    ],
+      {
+        test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
+        use: 'url-loader?limit=100000'
+      }
+    ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
+    extensions: ['.tsx', '.ts', '.js']
+  }
 };
