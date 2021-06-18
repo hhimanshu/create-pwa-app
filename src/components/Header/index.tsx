@@ -4,14 +4,11 @@ import Home from '../../icons/home.svg';
 
 export const Header = () => (
   <div className={styles.header}>
-    <Home/>
-    <Title/>
+    <Home />
+    <Title />
   </div>
 );
 
 const Title = () => (
-  <span className={styles.headerTitle}>
-    React PWA Starter
-  </span>
-)
-
+  <span className={styles.headerTitle}>React PWA Starter</span>
+);
