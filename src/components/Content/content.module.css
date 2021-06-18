@@ -1,0 +1,7 @@
+.content {
+    min-height: 100%;
+}
+
+.content > h1 {
+    margin: 0;
+}
