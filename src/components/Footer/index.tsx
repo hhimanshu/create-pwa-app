@@ -14,5 +14,7 @@ const FooterCaption = () => (
 );
 
 const ExternalLink = () => (
-  <a target='_blank' href='https://github.com/hhimanshu/react-pwa-starter'><LinkIcon /></a>
+  <a target='_blank' href='https://github.com/hhimanshu/react-pwa-starter'>
+    <LinkIcon />
+  </a>
 );
