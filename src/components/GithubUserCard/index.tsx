@@ -25,11 +25,13 @@ export const GithubUserCard = () => {
               name={githubUser.name}
               userName={githubUser.login}
             />
-            <Stats numRepos={githubUser.public_repos} numFollowers={githubUser.followers} />
+            <Stats
+              numRepos={githubUser.public_repos}
+              numFollowers={githubUser.followers}
+            />
           </Fragment>
         )}
       </div>
-
     </div>
   );
 };
