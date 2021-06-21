@@ -1,18 +1,15 @@
-@font-face {
-  font-family: 'Lato';
-  src: url('./fonts/Lato-Bold.ttf') format('truetype'),
-    url('./fonts/Lato-Light.ttf') format('truetype'),
-    url('./fonts/Lato-Regular.ttf') format('truetype'),
-    url('./fonts/Lato-Thin.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html,
 body {
-  font-family: 'Lato', serif;
+  font-family: 'Poppins', serif;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: var(--bg-color);
 }
 
-.hello {
-  color: orange;
+:root {
+  --gray-color: #777777;
+  --bg-color: #c1b9f3;
+  --white: #ffffff;
+  --black: #000000;
 }
