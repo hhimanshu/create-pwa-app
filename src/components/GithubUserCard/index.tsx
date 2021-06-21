@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import styles from './githubUserCard.module.css';
+import { Card } from '../Card';
 
 export const GithubUserCard = () => {
   const [githubUser, setGithubUser] = useState<GitHubUser | undefined>(
@@ -14,24 +15,22 @@ export const GithubUserCard = () => {
   }, [setGithubUser]);
 
   return (
-    <div className={styles.cardContainer}>
-      <div className={styles.card}>
-        {!githubUser && <h1>Loading ...</h1>}
-        {githubUser && (
-          <Fragment>
-            <Avatar userName={githubUser.name} url={githubUser.avatar_url} />
-            <GithubUserDetails
-              name={githubUser.name}
-              userName={githubUser.login}
-            />
-            <Stats
-              numRepos={githubUser.public_repos}
-              numFollowers={githubUser.followers}
-            />
-          </Fragment>
-        )}
-      </div>
-    </div>
+    <Card>
+      {!githubUser && <h1>Loading ...</h1>}
+      {githubUser && (
+        <Fragment>
+          <Avatar userName={githubUser.name} url={githubUser.avatar_url} />
+          <GithubUserDetails
+            name={githubUser.name}
+            userName={githubUser.login}
+          />
+          <Stats
+            numRepos={githubUser.public_repos}
+            numFollowers={githubUser.followers}
+          />
+        </Fragment>
+      )}
+    </Card>
   );
 };
 
