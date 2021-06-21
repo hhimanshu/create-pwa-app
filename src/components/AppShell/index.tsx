@@ -3,11 +3,11 @@ import { Fragment } from 'react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
-interface AppProps {
+interface AppShellProps {
   children: JSX.Element | JSX.Element[];
 }
 
-const App = (props: AppProps) => {
+const AppShell = (props: AppShellProps) => {
   return (
     <Fragment>
       <Header />
@@ -16,4 +16,4 @@ const App = (props: AppProps) => {
     </Fragment>
   );
 };
-export default App;
+export default AppShell;
