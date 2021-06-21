@@ -15,17 +15,21 @@ export const GithubUserCard = () => {
   }, [setGithubUser]);
 
   return (
-    <div className={styles.card}>
-      {!githubUser && <h1>Loading ...</h1>}
-      {githubUser && (
-        <Fragment>
-          <Avatar userName={githubUser.name} url={githubUser.avatar_url} />
-          <GithubUserDetails
-            name={githubUser.name}
-            userName={githubUser.login}
-          />
-        </Fragment>
-      )}
+    <div className={styles.cardContainer}>
+      <div className={styles.card}>
+        {!githubUser && <h1>Loading ...</h1>}
+        {githubUser && (
+          <Fragment>
+            <Avatar userName={githubUser.name} url={githubUser.avatar_url} />
+            <GithubUserDetails
+              name={githubUser.name}
+              userName={githubUser.login}
+            />
+            <Stats numRepos={githubUser.public_repos} numFollowers={githubUser.followers} />
+          </Fragment>
+        )}
+      </div>
+
     </div>
   );
 };
@@ -52,5 +56,29 @@ const GithubUserDetails = ({ name, userName }: GithubUserDetailsProps) => (
       <h1>{name}</h1>
       <h3>@{userName}</h3>
     </div>
+  </div>
+);
+
+interface NumericInformationProps {
+  value: number;
+  label: string;
+}
+
+const NumericInformation = ({ value, label }: NumericInformationProps) => (
+  <div className={styles.numericContainer}>
+    <h3>{value}</h3>
+    <p>{label}</p>
+  </div>
+);
+
+interface StatsProps {
+  numRepos: number;
+  numFollowers: number;
+}
+
+const Stats = ({ numRepos, numFollowers }: StatsProps) => (
+  <div className={styles.statsContainer}>
+    <NumericInformation value={numRepos} label={'Public Repos'} />
+    <NumericInformation value={numFollowers} label={'Followers'} />
   </div>
 );
