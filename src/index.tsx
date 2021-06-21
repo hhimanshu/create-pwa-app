@@ -4,5 +4,8 @@ import './styles.css';
 import '@fontsource/poppins';
 import '@fontsource/poppins/900.css';
 import App from './components/App';
+import { Content } from './components/Content';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Root = () => <App children={<Content />} />;
+
+ReactDOM.render(<Root />, document.getElementById('root'));

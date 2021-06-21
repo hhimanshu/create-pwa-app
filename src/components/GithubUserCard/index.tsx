@@ -9,7 +9,6 @@ export const GithubUserCard = () => {
     fetch('https://api.github.com/users/hhimanshu')
       .then(r => r.json())
       .then((user: GitHubUser) => {
-        console.log(user);
         setGithubUser(user);
       });
   }, [setGithubUser]);
