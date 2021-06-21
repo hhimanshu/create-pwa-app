@@ -1,42 +1,44 @@
 .card {
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: 15px 0;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px 0;
 }
 
 .avatar {
-    padding: 15px 0;
-    width: auto;
-    border: 1px solid blue;
+  padding: 15px 0;
+  width: auto;
+  border: 1px solid blue;
 }
 
 .avatar img {
-    height: 200px;
-    width: auto;
-    border-radius: 100px;
+  height: 200px;
+  width: auto;
+  border-radius: 100px;
 }
 
 .userDetailsContainer {
-    padding: 15px 0;
-    border: 1px solid orange;
+  padding: 15px 0;
+  border: 1px solid orange;
 }
 
 .userDetails {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.userDetails > h1, h3 {
-    margin: 0;
+.userDetails > h1,
+h3 {
+  margin: 0;
 }
 
 .userDetails > h3 {
-    font-weight: 100;
-    color: #777777;
+  font-weight: 100;
+  color: #777777;
 }
 
-.avatar, .userDetailsContainer {
-    display: flex;
-    justify-content: center;
+.avatar,
+.userDetailsContainer {
+  display: flex;
+  justify-content: center;
 }
