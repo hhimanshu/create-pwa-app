@@ -4,7 +4,7 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 
 interface AppProps {
-  children: JSX.Element | JSX.Element[]
+  children: JSX.Element | JSX.Element[];
 }
 
 const App = (props: AppProps) => {
