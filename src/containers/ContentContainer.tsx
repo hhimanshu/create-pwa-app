@@ -3,7 +3,9 @@ import { Content } from '../components/Content';
 import AppShell from '../components/AppShell';
 
 export const ContentContainer = () => {
-  return <AppShell>
-    <Content />
-  </AppShell>;
+  return (
+    <AppShell>
+      <Content />
+    </AppShell>
+  );
 };

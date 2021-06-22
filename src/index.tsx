@@ -13,12 +13,17 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // This is where your application content can be mounted
-const Root = () => <Router>
-  <Switch>
-    <Route path='/' exact><ContentContainer /></Route>
-    <Route path="/offline"><EmptyCard /></Route>
-  </Switch>
-</Router>;
-
+const Root = () => (
+  <Router>
+    <Switch>
+      <Route path='/' exact>
+        <ContentContainer />
+      </Route>
+      <Route path='/offline'>
+        <EmptyCard />
+      </Route>
+    </Switch>
+  </Router>
+);
 
 ReactDOM.render(<Root />, document.getElementById('root'));
