@@ -5,9 +5,11 @@ import '@fontsource/poppins';
 import '@fontsource/poppins/900.css';
 import AppShell from './components/AppShell';
 import { Content } from './components/Content';
+import { registerServiceWorker } from './utilities';
 
-// Note: You can enable based on process.env value as well
-registerServiceWorker();
+if (process.env.NODE_ENV === 'production') {
+  registerServiceWorker();
+}
 
 // This is where your application content can be mounted
 const Root = () => <AppShell children={<Content />} />;

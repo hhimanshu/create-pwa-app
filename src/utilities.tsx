@@ -1,4 +1,4 @@
-const registerServiceWorker = () => {
+export const registerServiceWorker = () => {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker
