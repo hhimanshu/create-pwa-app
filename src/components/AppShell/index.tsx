@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Fragment } from 'react';
+import { Fragment, ReactNode } from 'react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
 interface AppShellProps {
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
 }
 
 const AppShell = (props: AppShellProps) => {
