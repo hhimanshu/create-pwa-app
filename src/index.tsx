@@ -16,12 +16,8 @@ if (process.env.NODE_ENV === 'production') {
 const Root = () => (
   <Router>
     <Switch>
-      <Route path='/' exact>
-        <ContentContainer />
-      </Route>
-      <Route path='/offline'>
-        <EmptyCard />
-      </Route>
+      <Route path='/' exact component={ContentContainer} />
+      <Route path='/offline' exact component={EmptyCard} />
     </Switch>
   </Router>
 );

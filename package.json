@@ -8,7 +8,7 @@
     "test:watch": "jest --watchAll --config jest.config.ts",
     "dev": "webpack --config webpack.dev.config.js",
     "start": "webpack serve --open --config webpack.dev.js ",
-    "build": "webpack --config webpack.prod.js",
+    "build": "rm -rf dist && webpack --config webpack.prod.js",
     "lint": "eslint -c .eslintrc.js --ext .ts src",
     "format": "prettier --write .",
     "postinstall": "husky install",
