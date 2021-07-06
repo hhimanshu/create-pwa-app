@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ContentContainer } from './containers/ContentContainer';
 import { EmptyCard } from './components/EmptyCard';
 
-if (process.env.NODE_ENV === 'production') {
+// todo (h2): update this condition
+if (true || process.env.NODE_ENV === 'production') {
   registerServiceWorker();
 }
 

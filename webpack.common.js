@@ -13,13 +13,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
     }),
-    new WorkboxPlugin.GenerateSW({
-      skipWaiting: true,
-      clientsClaim: true,
-    }),
     new CopyPlugin({
       patterns: [
-        { from: 'src/manifest.json', to: './manifest.json' },
+        { from: 'src/manifest.json', to: './' },
+        { from: 'src/service-worker.js', to: './service-worker.js' },
         { from: 'src/icons/manifest', to: './' },
       ],
     }),
