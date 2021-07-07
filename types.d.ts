@@ -5,4 +5,3 @@ export interface GithubUser {
   followers: number;
   public_repos: number;
 }
-

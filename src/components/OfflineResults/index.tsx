@@ -6,14 +6,14 @@ export const OfflineResults = () => {
   const [cachedResponses, setCachedResponses] = useState<GithubUser[]>([]);
 
   useEffect(() => {
-    getCachedGithubUsers().then(users => setCachedResponses(users))
+    getCachedGithubUsers().then(users => setCachedResponses(users));
   }, [getCachedGithubUsers, setCachedResponses]);
 
   return (
     <div>
       Your Offline results
       {cachedResponses.map(r => {
-        return <pre key={r.login}>{JSON.stringify(r)}</pre>
+        return <pre key={r.login}>{JSON.stringify(r)}</pre>;
       })}
     </div>
   );
