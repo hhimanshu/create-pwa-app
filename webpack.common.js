@@ -16,12 +16,11 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'src/manifest.json', to: './' },
-        { from: 'src/service-worker.js', to: './service-worker.js' },
         { from: 'src/icons/manifest', to: './' },
       ],
     }),
     new InjectManifest({
-      swSrc: './src/service-worker.js',
+      swSrc: './src/service-worker.ts',
     }),
   ],
   output: {
