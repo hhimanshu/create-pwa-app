@@ -1,15 +1,16 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import styles from './githubUserCard.module.css';
 import { Card } from '../Card';
+import { GithubUser } from '../../../declaration';
 
 export const GithubUserCard = () => {
-  const [githubUser, setGithubUser] = useState<GitHubUser | undefined>(
+  const [githubUser, setGithubUser] = useState<GithubUser | undefined>(
     undefined
   );
   useEffect(() => {
     fetch('https://api.github.com/users/hhimanshu')
       .then(r => r.json())
-      .then((user: GitHubUser) => {
+      .then((user: GithubUser) => {
         setGithubUser(user);
       });
   }, [setGithubUser]);
