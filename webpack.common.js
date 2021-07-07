@@ -21,8 +21,8 @@ module.exports = {
       ],
     }),
     new InjectManifest({
-      swSrc: './src/service-worker.js'
-    })
+      swSrc: './src/service-worker.js',
+    }),
   ],
   output: {
     filename: '[name].[contenthash].bundle.js',
