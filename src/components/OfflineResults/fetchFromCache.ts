@@ -1,4 +1,4 @@
-import { GithubUser } from '../../../declaration';
+import { GithubUser } from '../../../types';
 
 const findGitHubRequests: () => Promise<Response[]> = async () => {
   // Get a list of all of the caches for this origin

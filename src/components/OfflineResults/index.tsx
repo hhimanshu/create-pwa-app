@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getCachedGithubUsers } from './fetchFromCache';
-import { GithubUser } from '../../../declaration';
+import { GithubUser } from '../../../types';
 
 export const OfflineResults = () => {
   const [cachedResponses, setCachedResponses] = useState<GithubUser[]>([]);
