@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -20,6 +20,9 @@ module.exports = {
         { from: 'src/icons/manifest', to: './' },
       ],
     }),
+    new InjectManifest({
+      swSrc: './src/service-worker.js'
+    })
   ],
   output: {
     filename: '[name].[contenthash].bundle.js',
