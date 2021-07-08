@@ -24,8 +24,7 @@ export const OfflineResults = () => {
 const OfflineHeader = () => {
   return (
     <div className={styles.offlineHeader}>
-      <Offline style={{ height: 40, width: 'auto' }} />
-
+      <Offline style={{ height: 40, width: 'auto', marginRight: '3%' }} />
       <p>You are currently offline</p>
       <button
         className={styles.refresh}

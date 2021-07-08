@@ -1,9 +1,13 @@
 .offlineHeader {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   background: #ffeeb0;
+}
+
+.offlineHeader > button {
+  margin-left: 3%;
 }
 
 .offlineHeader > p {
