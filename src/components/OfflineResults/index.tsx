@@ -4,7 +4,7 @@ import { GithubUser } from '../../../types';
 import AppShell from '../AppShell';
 import Offline from '../../icons/offline.svg';
 import styles from './offlineResults.module.css';
-import { ListCachedGithubUsers } from '../ListCachedGithubUsers/listCachedGithubUsers';
+import { ListCachedGithubUsers } from '../ListCachedGithubUsers';
 
 export const OfflineResults = () => {
   const [cachedResponses, setCachedResponses] = useState<GithubUser[]>([]);

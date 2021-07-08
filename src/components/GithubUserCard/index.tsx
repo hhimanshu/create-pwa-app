@@ -2,13 +2,14 @@ import React, { Fragment, useEffect, useState } from 'react';
 import styles from './githubUserCard.module.css';
 import { Card } from '../Card';
 import { GithubUser } from '../../../types';
+import { Avatar } from '../Avatar';
 
 export const GithubUserCard = () => {
   const [githubUser, setGithubUser] = useState<GithubUser | undefined>(
     undefined
   );
   useEffect(() => {
-    fetch('https://api.github.com/users/deekshasharma')
+    fetch('https://api.github.com/users/bonsaiilabs')
       .then(r => r.json())
       .then((user: GithubUser) => {
         setGithubUser(user);
@@ -20,7 +21,11 @@ export const GithubUserCard = () => {
       {!githubUser && <h1>Loading ...</h1>}
       {githubUser && (
         <Fragment>
-          <Avatar userName={githubUser.name} url={githubUser.avatar_url} />
+          <Avatar
+            userName={githubUser.name}
+            url={githubUser.avatar_url}
+            padding={'15px 0'}
+          />
           <GithubUserDetails
             name={githubUser.name}
             userName={githubUser.login}
@@ -34,17 +39,6 @@ export const GithubUserCard = () => {
     </Card>
   );
 };
-
-interface AvatarProps {
-  userName: string;
-  url: string;
-}
-
-const Avatar = ({ userName, url }: AvatarProps) => (
-  <div className={styles.avatar}>
-    <img alt={userName} src={url} />
-  </div>
-);
 
 interface GithubUserDetailsProps {
   name: string;
