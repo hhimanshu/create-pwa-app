@@ -8,7 +8,7 @@ export const GithubUserCard = () => {
     undefined
   );
   useEffect(() => {
-    fetch('https://api.github.com/users/hhimanshu')
+    fetch('https://api.github.com/users/deekshasharma')
       .then(r => r.json())
       .then((user: GithubUser) => {
         setGithubUser(user);
