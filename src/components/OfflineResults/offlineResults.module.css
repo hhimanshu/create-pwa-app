@@ -1,27 +1,27 @@
 .offlineHeader {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background: #FFEEB0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background: #ffeeb0;
 }
 
 .offlineHeader > p {
-    margin: 0;
+  margin: 0;
 }
 
 .offlineIconContainer {
-    height: 10px;
-    width: auto;
-    border: 1px solid black
+  height: 10px;
+  width: auto;
+  border: 1px solid black;
 }
 
 .refresh {
-    background: #000000;
-    color: #ffffff;
-    border: 0;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
+  background: #000000;
+  color: #ffffff;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
 }

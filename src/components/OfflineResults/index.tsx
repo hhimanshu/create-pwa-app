@@ -4,6 +4,7 @@ import { GithubUser } from '../../../types';
 import AppShell from '../AppShell';
 import Offline from '../../icons/offline.svg';
 import styles from './offlineResults.module.css';
+import { ListCachedGithubUsers } from '../ListCachedGithubUsers/listCachedGithubUsers';
 
 export const OfflineResults = () => {
   const [cachedResponses, setCachedResponses] = useState<GithubUser[]>([]);
@@ -15,12 +16,7 @@ export const OfflineResults = () => {
   return (
     <AppShell>
       <OfflineHeader />
-      <div>
-        Your Offline results
-        {cachedResponses.map(r => {
-          return <pre key={r.login}>{r.name}</pre>;
-        })}
-      </div>
+      <ListCachedGithubUsers users={cachedResponses} />
     </AppShell>
   );
 };
