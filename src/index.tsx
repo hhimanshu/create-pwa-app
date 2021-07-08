@@ -6,7 +6,7 @@ import '@fontsource/poppins/900.css';
 import { registerServiceWorker } from './utilities';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ContentContainer } from './containers/ContentContainer';
-import { EmptyCard } from './components/EmptyCard';
+import { OfflineResults } from './components/OfflineResults';
 
 // todo (h2): update this condition
 if (true || process.env.NODE_ENV === 'production') {
@@ -18,7 +18,7 @@ const Root = () => (
   <Router>
     <Switch>
       <Route path='/' exact component={ContentContainer} />
-      <Route path='/offline' exact component={EmptyCard} />
+      <Route path='/offline' exact component={OfflineResults} />
     </Switch>
   </Router>
 );
