@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getCachedGithubUsers } from './fetchFromCache';
 import { GithubUser } from '../../../types';
-import AppShell from '../AppShell';
 import Offline from '../../icons/offline.svg';
 import styles from './offlineResults.module.css';
 import { ListCachedGithubUsers } from '../ListCachedGithubUsers';
@@ -14,14 +13,14 @@ export const OfflineResults = () => {
   }, [getCachedGithubUsers, setCachedResponses]);
 
   return (
-    <AppShell>
+    <React.Fragment>
       <OfflineHeader />
       <div className={styles.offlineContent}>
         <div className={styles.offlineResultsContainer}>
           <ListCachedGithubUsers users={cachedResponses} />
         </div>
       </div>
-    </AppShell>
+    </React.Fragment>
   );
 };
 
