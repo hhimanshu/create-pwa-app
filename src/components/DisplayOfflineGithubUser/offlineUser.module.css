@@ -1,41 +1,42 @@
 .githubUserContainer {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 5px;
-    border: 1px solid #c8c8c8;
-    width: 100%;
-    margin: 7px 0;
-    padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #c8c8c8;
+  width: 100%;
+  margin: 7px 0;
+  padding: 30px 0;
 }
 
 .offlineAvatar {
-    padding: 10px;
+  padding: 10px;
 }
 
 .offlineGithubUserContainer {
-    padding: 0 30px;
+  padding: 0 30px;
 }
 
-.offlineGithubUserContainer > p, .offlineStat > p {
-    margin: 0;
-    color: #777777;
+.offlineGithubUserContainer > p,
+.offlineStat > p {
+  margin: 0;
+  color: #777777;
 }
 
 .offlineStats {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
 }
 
 .offlineStat {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .offlineStat > h3 {
-    margin: 0;
+  margin: 0;
 }
 
 .offlineStat:first-child {
-    margin-right: 40px;
+  margin-right: 40px;
 }

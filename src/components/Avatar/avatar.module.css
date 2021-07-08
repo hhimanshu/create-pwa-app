@@ -1,14 +1,14 @@
 .avatar {
-    width: auto;
+  width: auto;
 }
 
 .avatar img {
-    height: 200px;
-    width: auto;
-    border-radius: 100px;
+  height: 200px;
+  width: auto;
+  border-radius: 100px;
 }
 
 .avatar {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
