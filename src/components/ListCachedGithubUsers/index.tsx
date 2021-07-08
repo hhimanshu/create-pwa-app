@@ -8,11 +8,11 @@ interface CachedGithubUsersProps {
 }
 export const ListCachedGithubUsers = ({ users }: CachedGithubUsersProps) => {
   return (
-    <div className={styles.resultsContainer}>
+    <div className={styles.githubUsersContainer}>
       <h3>Your Past Searches</h3>
       <div>
         {users.map(user => (
-          <div className={styles.offlineResults}>
+          <div key={user.login} className={styles.offlineResults}>
             <DisplayOfflineGithubUser key={user.login} user={user} />
           </div>
         ))}

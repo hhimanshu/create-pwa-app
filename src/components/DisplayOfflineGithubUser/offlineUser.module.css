@@ -1,6 +1,6 @@
 .githubUserContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border-radius: 5px;
   border: 1px solid #c8c8c8;
   width: 100%;
@@ -9,7 +9,7 @@
 }
 
 .offlineAvatar {
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .offlineGithubUserContainer {

@@ -1,31 +1,45 @@
 .offlineHeader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: #ffeeb0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #ffeeb0;
 }
 
 .offlineHeader > button {
-  margin-left: 3%;
+    margin-left: 3%;
 }
 
 .offlineHeader > p {
-  margin: 0;
+    margin: 0;
 }
 
 .offlineIconContainer {
-  height: 10px;
-  width: auto;
-  border: 1px solid black;
+    height: 10px;
+    width: auto;
+    border: 1px solid black;
 }
 
 .refresh {
-  background: #000000;
-  color: #ffffff;
-  border: 0;
-  padding: 10px 15px;
-  border-radius: 7px;
-  font-weight: bold;
-  cursor: pointer;
+    background: #000000;
+    color: #ffffff;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.offlineResultsContainer {
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-top: 3%;
+}
+
+.offlineContent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

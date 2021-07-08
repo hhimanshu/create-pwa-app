@@ -16,7 +16,11 @@ export const OfflineResults = () => {
   return (
     <AppShell>
       <OfflineHeader />
-      <ListCachedGithubUsers users={cachedResponses} />
+      <div className={styles.offlineContent}>
+        <div className={styles.offlineResultsContainer}>
+          <ListCachedGithubUsers users={cachedResponses} />
+        </div>
+      </div>
     </AppShell>
   );
 };
