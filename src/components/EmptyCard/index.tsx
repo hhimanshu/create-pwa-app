@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '../Card';
+import { Card } from '../Starter/Card';
 import styles from './emptyCard.module.css';
 import Offline from '../../icons/offline.svg';
 import AppShell from '../AppShell';

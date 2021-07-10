@@ -1,7 +1,7 @@
 import { GithubUser } from '../../../types';
 import styles from './offlineUser.module.css';
 import React from 'react';
-import { Avatar } from '../Avatar';
+import { Avatar } from '../Starter/Avatar';
 
 interface DisplayGithubUserProps {
   user: GithubUser;

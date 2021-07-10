@@ -1,9 +1,11 @@
 .avatar {
   width: auto;
+  display: flex;
+  align-items: center;
 }
 
 .avatar img {
-  height: 200px;
+  height: 100px;
   width: auto;
   border-radius: 100px;
 }

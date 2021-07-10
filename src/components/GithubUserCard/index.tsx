@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import styles from './githubUserCard.module.css';
-import { Card } from '../Card';
+import { Card } from '../Starter/Card';
 import { GithubUser } from '../../../types';
-import { Avatar } from '../Avatar';
+import { Avatar } from '../Starter/Avatar';
 
 export const GithubUserCard = () => {
   const [githubUser, setGithubUser] = useState<GithubUser | undefined>(
