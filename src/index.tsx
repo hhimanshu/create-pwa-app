@@ -2,6 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './styles.css';
 import '@fontsource/rubik';
+import '@fontsource/rubik/300.css';
+import '@fontsource/rubik/400.css';
 import '@fontsource/rubik/700.css';
 import { registerServiceWorker } from './utilities';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
