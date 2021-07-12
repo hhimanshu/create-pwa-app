@@ -9,11 +9,12 @@
 }
 
 .numericContainer > p {
-  font-size: 15px;
-  color: var(--black);
+  font-size: 18px;
+  color: var(--gray);
 }
 
 .statsContainer {
   display: flex;
   justify-content: space-around;
+  padding: 6px 0;
 }

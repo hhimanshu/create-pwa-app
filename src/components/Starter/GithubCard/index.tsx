@@ -22,7 +22,11 @@ export const GithubCard = () => {
   return (
     <div className={styles.githubCardContainer}>
       <div>
-        <Avatar userName={githubUser.name} url={githubUser.avatar_url} />
+        <Avatar
+          userName={githubUser.name}
+          url={githubUser.avatar_url}
+          height={100}
+        />
         <GithubUserDetails name={githubUser.name} userName={githubUser.login} />
         <Stats
           numRepos={githubUser.public_repos}
