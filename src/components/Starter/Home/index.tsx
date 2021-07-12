@@ -5,7 +5,7 @@ import { GithubCard } from '../GithubCard';
 export const Home = () => {
   return (
     <div className={styles.homeContainer}>
-      <div className={styles.githubCard}>
+      <div className={styles.githubCardParentContainer}>
         <GithubCard />
       </div>
       <div className={styles.searchForm}>Search Form</div>
