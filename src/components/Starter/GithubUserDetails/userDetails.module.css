@@ -24,3 +24,8 @@ h3 {
   display: flex;
   justify-content: center;
 }
+
+.followButton {
+  background: var(--red);
+  margin-top: 20px;
+}

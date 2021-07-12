@@ -8,3 +8,7 @@
 .githubCardContainer > div:first-child {
   grid-column: 1 / span 12;
 }
+
+.githubCardContainer > div > :last-child {
+  margin-top: 16px;
+}
