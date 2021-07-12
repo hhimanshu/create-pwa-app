@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { Fragment, ReactNode } from 'react';
 import { Header } from '../Header';
 
 interface AppShellProps {
@@ -7,9 +7,9 @@ interface AppShellProps {
 
 export const AppShell = ({ children }: AppShellProps) => {
   return (
-    <div>
+    <Fragment>
       <Header />
-      <body>{children}</body>
-    </div>
+      <div>{children}</div>
+    </Fragment>
   );
 };

@@ -1,5 +1,5 @@
 .userDetailsContainer {
-    padding: 15px 0;
+    padding: 0;
 }
 
 .userDetails {
@@ -13,9 +13,8 @@ h3 {
     margin: 0;
 }
 
-.userDetails > h3 {
-    font-weight: 100;
-    color: var(--black);
+.userDetails > p {
+    color: var(--gray);
 }
 
 .userDetailsContainer {

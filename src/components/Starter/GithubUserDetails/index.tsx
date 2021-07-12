@@ -6,14 +6,11 @@ interface GithubUserDetailsProps {
   userName: string;
 }
 
-export const GithubUserDetails = ({
-  name,
-  userName,
-}: GithubUserDetailsProps) => (
+export const GithubUserDetails = ({ name, userName }: GithubUserDetailsProps) => (
   <div className={styles.userDetailsContainer}>
     <div className={styles.userDetails}>
       <h1>{name}</h1>
-      <h3>@{userName}</h3>
+      <p>@{userName}</p>
     </div>
   </div>
 );
