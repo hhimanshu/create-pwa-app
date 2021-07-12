@@ -10,7 +10,7 @@ export const GithubCard = () => {
     undefined
   );
   useEffect(() => {
-    fetch('https://api.github.com/users/bonsaiilabs')
+    fetch('https://api.github.com/users/hhimanshu')
       .then(r => r.json())
       .then((user: GithubUser) => {
         setGithubUser(user);
@@ -25,7 +25,7 @@ export const GithubCard = () => {
         <Avatar
           userName={githubUser.name}
           url={githubUser.avatar_url}
-          height={100}
+          height={150}
         />
         <GithubUserDetails name={githubUser.name} userName={githubUser.login} />
         <Stats
