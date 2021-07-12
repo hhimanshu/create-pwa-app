@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { GithubUser } from '../../../../types';
 import styles from './githubCard.module.css';
 import { Avatar } from '../Avatar';
 import { GithubUserDetails } from '../GithubUserDetails';
 import { Stats } from '../Stats';
 
-export const GithubCard = () => {
-  const [githubUser, setGithubUser] = useState<GithubUser | undefined>(
-    undefined
-  );
-  useEffect(() => {
-    fetch('https://api.github.com/users/hhimanshu')
-      .then(r => r.json())
-      .then((user: GithubUser) => {
-        setGithubUser(user);
-      });
-  }, [setGithubUser]);
+interface GithubCardProps {
+  githubUser: GithubUser;
+}
 
+export const GithubCard = ({ githubUser }: GithubCardProps) => {
   if (!githubUser) return <h1>Loading ...</h1>;
 
   return (

@@ -15,7 +15,7 @@ export const SearchForm = ({ onSubmit }: SearchFormProps) => {
       <input
         type='text'
         onChange={handleChange}
-        placeholder={'@ Enter GitHub Username'}
+        placeholder={'@ Enter GitHub User'}
       />
       <button onClick={() => onSubmit(userName)}>Search</button>
     </div>
