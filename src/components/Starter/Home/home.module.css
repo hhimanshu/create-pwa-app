@@ -13,3 +13,10 @@
   border-radius: 6px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.error {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  border: 1px solid var(--red-dark)
+}

@@ -3,12 +3,15 @@ import styles from './home.module.css';
 import { GithubCard } from '../GithubCard';
 import { SearchForm } from '../SearchForm';
 import { GithubUser } from '../../../../types';
+import { Error } from '../Error';
 
 export const Home = () => {
   const [githubUser, setGithubUser] = useState<GithubUser | undefined>(
     undefined
   );
   const [formUser, setFormUser] = useState<string | undefined>(undefined);
+  const [showError, setShowError] = useState<boolean>(false);
+
   const fetchUser = (userName: string) =>
     fetch(`https://api.github.com/users/${userName}`)
       .then(r => {
@@ -16,7 +19,7 @@ export const Home = () => {
         return r.json();
       })
       .then((user: GithubUser) => setGithubUser(user))
-      .catch(err => console.error('Error', err));
+      .catch(_ => setShowError(true));
 
   useEffect(() => {
     fetchUser('hhimanshu');
@@ -25,12 +28,23 @@ export const Home = () => {
   useEffect(() => {
     fetchUser(formUser);
   }, [formUser]);
+
+  useEffect(() => {
+    const handler = setTimeout(_ => setShowError(false), 5000);
+    return () => clearTimeout(handler);
+  }, [showError]);
+
   return (
-    <div className={styles.homeContainer}>
-      <div className={styles.githubCardParentContainer}>
-        <GithubCard githubUser={githubUser} />
+    <>
+      <div className={styles.homeContainer}>
+        <div className={styles.githubCardParentContainer}>
+          <GithubCard githubUser={githubUser} />
+        </div>
+        <SearchForm onSubmit={userName => setFormUser(userName)} />
       </div>
-      <SearchForm onSubmit={userName => setFormUser(userName)} />
-    </div>
+      <div className={styles.error}>
+        {showError && <Error userName={formUser} />}
+      </div>
+    </>
   );
 };
