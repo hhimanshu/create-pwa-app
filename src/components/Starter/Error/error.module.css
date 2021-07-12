@@ -1,12 +1,12 @@
 .errorContainer {
-    height: 44px;
-    background: var(--red);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--red-dark);
+  height: 44px;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red-dark);
 }
 
 .errorContainer > b {
-    margin-left: 8px;
+  margin-left: 8px;
 }
