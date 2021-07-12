@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './home.module.css';
 import { GithubCard } from '../GithubCard';
+import { SearchForm } from '../SearchForm';
 
 export const Home = () => {
   return (
@@ -8,7 +9,7 @@ export const Home = () => {
       <div className={styles.githubCardParentContainer}>
         <GithubCard />
       </div>
-      <div className={styles.searchForm}>Search Form</div>
+      <SearchForm onSubmit={userName => console.log(`searching ${userName}`)} />
     </div>
   );
 };
