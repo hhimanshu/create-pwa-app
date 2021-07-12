@@ -9,10 +9,10 @@ export const Home = () => {
   const [githubUser, setGithubUser] = useState<GithubUser | undefined>(
     undefined
   );
-  const [formUser, setFormUser] = useState<string | undefined>(undefined);
+  const [formUser, setFormUser] = useState<string>('hhimanshu');
   const [showError, setShowError] = useState<boolean>(false);
 
-  const fetchUser = (userName: string) =>
+  const fetchUser = (userName: string) => {
     fetch(`https://api.github.com/users/${userName}`)
       .then(r => {
         if (r.status !== 200) throw 'no user found!';
@@ -20,13 +20,10 @@ export const Home = () => {
       })
       .then((user: GithubUser) => setGithubUser(user))
       .catch(_ => setShowError(true));
+  };
 
   useEffect(() => {
-    fetchUser('hhimanshu');
-  }, [setGithubUser]);
-
-  useEffect(() => {
-    fetchUser(formUser);
+    if (formUser) fetchUser(formUser);
   }, [formUser]);
 
   useEffect(() => {

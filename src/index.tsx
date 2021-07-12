@@ -12,7 +12,7 @@ import { OfflineResults } from './components/OfflineResults';
 import { HomeContainer } from './containers/HomeContainer';
 
 // todo (h2): update this condition
-if (process.env.NODE_ENV === 'production') {
+if (true || process.env.NODE_ENV === 'production') {
   registerServiceWorker();
 }
 
