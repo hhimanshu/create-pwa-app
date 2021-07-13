@@ -11,14 +11,14 @@ export const DisplayOfflineGithubUser = ({ user }: DisplayGithubUserProps) => {
   return (
     <div className={styles.githubUserContainer}>
       <div className={styles.offlineAvatar}>
-        <Avatar userName={user.name} url={user.avatar_url} height={100} />
+        <Avatar userName={user.name} url={user.avatar_url} height={86} />
       </div>
       <div className={styles.offlineGithubUserContainer}>
         <h3>{user.name}</h3>
         <p>{`@${user.login}`}</p>
         <div className={styles.offlineStats}>
-          <OfflineStat stat={user.public_repos} label={'Repos'} />
-          <OfflineStat stat={user.followers} label={'Followers'} />
+          <OfflineStat stat={user.public_repos} label={'public repos'} />
+          <OfflineStat stat={user.followers} label={'followers'} />
         </div>
       </div>
     </div>

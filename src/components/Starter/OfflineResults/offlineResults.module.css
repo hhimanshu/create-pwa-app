@@ -43,8 +43,5 @@
 
 .offlineResultsContainer {
     border: 1px solid black;
-}
-
-.offlineHeader, .offlineResultsContainer {
-    padding: 10px;
+    margin-top: 16px;
 }

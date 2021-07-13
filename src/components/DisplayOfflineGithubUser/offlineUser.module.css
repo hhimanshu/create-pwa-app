@@ -1,23 +1,23 @@
 .githubUserContainer {
   display: flex;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 1px solid #c8c8c8;
   width: 100%;
-  margin: 7px 0;
-  padding: 30px 0;
-}
-
-.offlineAvatar {
-  padding: 0 10px;
+  padding: 24px 0;
 }
 
 .offlineGithubUserContainer {
   padding: 0 30px;
 }
 
+.offlineGithubUserContainer > h3 {
+  font-size: 16px;
+}
+
 .offlineGithubUserContainer > p,
 .offlineStat > p {
+  font-size: 12px;
   margin: 0;
   color: #777777;
 }
@@ -25,18 +25,18 @@
 .offlineStats {
   display: flex;
   justify-content: flex-start;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .offlineStat {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 .offlineStat > h3 {
-  margin: 0;
+  margin-right: 8px;
 }
 
 .offlineStat:first-child {
-  margin-right: 40px;
+  margin-right: 24px;
 }
