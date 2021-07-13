@@ -5,6 +5,7 @@
   border: 1px solid #c8c8c8;
   width: 100%;
   padding: 24px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .offlineGithubUserContainer {
@@ -31,6 +32,7 @@
 .offlineStat {
   display: flex;
   align-items: center;
+  margin-top: 8px;
 }
 
 .offlineStat > h3 {
