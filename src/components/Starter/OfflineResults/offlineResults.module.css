@@ -1,0 +1,50 @@
+.offlineResults {
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 55px 1fr auto;
+}
+
+.offlineResults > h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.offlineHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-100);
+}
+
+.offlineHeader > button {
+    margin-left: 4%;
+}
+
+.offlineHeader > p {
+    margin-left: 4%;
+}
+
+.offlineIconContainer {
+    height: 10px;
+    width: auto;
+    border: 1px solid black;
+}
+
+.refresh {
+    background: #000000;
+    color: #ffffff;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.offlineResultsContainer {
+    border: 1px solid black;
+}
+
+.offlineHeader, .offlineResultsContainer {
+    padding: 10px;
+}

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { getCachedGithubUsers } from './fetchFromCache';
-import { GithubUser } from '../../../types';
-import Offline from '../../icons/offline.svg';
+import { GithubUser } from '../../../../types';
+import Offline from '../../../icons/offline.svg';
 import styles from './offlineResults.module.css';
 import { ListCachedGithubUsers } from '../ListCachedGithubUsers';
+import { AppShell } from '../AppShell';
 
 export const OfflineResults = () => {
   const [cachedResponses, setCachedResponses] = useState<GithubUser[]>([]);
@@ -13,14 +14,15 @@ export const OfflineResults = () => {
   }, [getCachedGithubUsers, setCachedResponses]);
 
   return (
-    <React.Fragment>
-      <OfflineHeader />
-      <div className={styles.offlineContent}>
+    <AppShell>
+      <div className={styles.offlineResults}>
+        <OfflineHeader />
+        <h3>Your Past Searches</h3>
         <div className={styles.offlineResultsContainer}>
           <ListCachedGithubUsers users={cachedResponses} />
         </div>
       </div>
-    </React.Fragment>
+    </AppShell>
   );
 };
 
@@ -33,7 +35,7 @@ const OfflineHeader = () => {
         className={styles.refresh}
         onClick={() => window.location.reload()}
       >
-        refresh
+        Refresh
       </button>
     </div>
   );

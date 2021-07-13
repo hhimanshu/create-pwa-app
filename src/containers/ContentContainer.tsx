@@ -1,7 +1,7 @@
 import React from 'react';
 import { Content } from '../components/Content';
 import AppShell from '../components/AppShell';
-import { OfflineResults } from '../components/OfflineResults';
+import { OfflineResults } from '../components/Starter/OfflineResults';
 
 export const ContentContainer = () => {
   return (
