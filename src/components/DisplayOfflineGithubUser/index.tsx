@@ -17,7 +17,7 @@ export const DisplayOfflineGithubUser = ({ user }: DisplayGithubUserProps) => {
         <h3>{user.name}</h3>
         <p>{`@${user.login}`}</p>
         <div className={styles.offlineStats}>
-          <OfflineStat stat={user.public_repos} label={'public repos'} />
+          <OfflineStat stat={user.public_repos} label={'repos'} />
           <OfflineStat stat={user.followers} label={'followers'} />
         </div>
       </div>

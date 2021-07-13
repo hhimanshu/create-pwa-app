@@ -14,6 +14,7 @@
 
 .offlineGithubUserContainer > h3 {
   font-size: 16px;
+  margin-bottom: 4px;
 }
 
 .offlineGithubUserContainer > p,
@@ -25,7 +26,7 @@
 
 .offlineStats {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin-top: 8px;
 }
 
