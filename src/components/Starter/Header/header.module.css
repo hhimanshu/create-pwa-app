@@ -1,0 +1,31 @@
+.header {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.menuContainer {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.logoContainer {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.logo > h3 {
+  margin: 0;
+}

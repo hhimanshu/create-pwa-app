@@ -1,0 +1,21 @@
+.numericContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.numericContainer > h3 {
+  font-size: 24px;
+}
+
+.numericContainer > p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--gray);
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 0;
+}

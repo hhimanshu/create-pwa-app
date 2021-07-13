@@ -1,0 +1,45 @@
+.githubUserContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #c8c8c8;
+  width: 100%;
+  padding: 24px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offlineGithubUserContainer {
+  padding: 0 30px;
+}
+
+.offlineGithubUserContainer > h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.offlineGithubUserContainer > p,
+.offlineStat > p {
+  font-size: 12px;
+  margin: 0;
+  color: #777777;
+}
+
+.offlineStats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.offlineStat {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.offlineStat > h3 {
+  margin-right: 8px;
+}
+
+.offlineStat:first-child {
+  margin-right: 24px;
+}

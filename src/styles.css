@@ -1,15 +1,17 @@
 html,
 body {
-  font-family: 'Poppins', serif;
+  font-family: 'Rubik', serif;
   padding: 0;
   margin: 0;
-  height: 100%;
-  background-color: var(--bg-color);
+  background-color: var(--gray-50);
 }
 
 :root {
-  --gray-color: #777777;
-  --bg-color: #c1b9f3;
   --white: #ffffff;
   --black: #000000;
+  --gray: #777777;
+  --gray-50: #fafafa;
+  --gray-100: #f4f4f5;
+  --red: #fee2e2;
+  --red-dark: #ef4444;
 }
