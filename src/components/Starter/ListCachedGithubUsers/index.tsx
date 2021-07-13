@@ -1,6 +1,6 @@
 import { GithubUser } from '../../../../types';
 import React from 'react';
-import { DisplayOfflineGithubUser } from '../../DisplayOfflineGithubUser';
+import { DisplayOfflineGithubUser } from '../DisplayOfflineGithubUser';
 import styles from './cached.module.css';
 
 interface CachedGithubUsersProps {
