@@ -8,7 +8,6 @@ import '@fontsource/rubik/500.css';
 import '@fontsource/rubik/700.css';
 import { registerServiceWorker } from './utilities';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { OfflineResults } from './components/Starter/OfflineResults';
 import { HomeContainer } from './containers/HomeContainer';
 
 // todo (h2): update this condition
@@ -21,7 +20,6 @@ const Root = () => (
   <Router>
     <Switch>
       <Route path='/' exact component={HomeContainer} />
-      <Route path='/offline' exact component={OfflineResults} />
     </Switch>
   </Router>
 );
