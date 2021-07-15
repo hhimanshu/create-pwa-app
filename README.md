@@ -11,6 +11,7 @@
 - `yarn start` to develop locally.
 - `yarn test` to test and see the code coverage.
 - `yarn build` to create a production build.
+- `yarn build-for-pwa` to create a production build and generate `assetlinks.json` for PWA.
 - `yarn start:prod` to serve production build on port `5000`.
 - `yarn create:start:prod` to create and start a production build.
 - `yarn storybook` to start storybook in development mode.
