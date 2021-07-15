@@ -5,4 +5,4 @@ coverage
 storybook-static/
 *.DS_Store
 yarn-error.log
-.env
+*.env
