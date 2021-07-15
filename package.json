@@ -11,6 +11,7 @@
     "start:prod": "npx -y serve -s dist",
     "build": "rm -rf dist && webpack --config webpack.prod.js",
     "generateAssetLinks": "ts-node scripts/generateAssetLinks.ts",
+    "build-for-pwa": "yarn build && yarn generateAssetLinks",
     "create:start:prod": "yarn build && yarn start:prod",
     "lint": "eslint -c .eslintrc.js --ext .ts src",
     "format": "prettier --write .",
