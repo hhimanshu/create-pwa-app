@@ -19,7 +19,7 @@ export const SoftwareUpdateNotification = ({
   return (
     <Notification>
       <div className={styles.softwareUpdateNotificationContainer}>
-        <div>New Update Available</div>
+        <p>New Update Available</p>
         <button onClick={onClick}>UPDATE</button>
       </div>
     </Notification>

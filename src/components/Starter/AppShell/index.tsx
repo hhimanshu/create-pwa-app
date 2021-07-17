@@ -11,7 +11,6 @@ export const AppShell = ({ children }: AppShellProps) => {
   const { isUpdateAvailable, waitingWorker } = useSoftwareUpdate();
   console.log({ isUpdateAvailable, waitingWorker });
   const onButtonClick = () => {
-    console.log('button clicked....');
     waitingWorker.postMessage('skipWaiting');
   };
   return (
