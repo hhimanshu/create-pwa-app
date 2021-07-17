@@ -1,0 +1,12 @@
+.notificationContainer {
+    background-color: var(--gray-100);
+    width: 100%;
+    padding: 25px 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.softwareUpdateNotificationContainer {
+    display: flex;
+    justify-content: space-around;
+}

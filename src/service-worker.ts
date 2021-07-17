@@ -10,3 +10,12 @@ precacheAndRoute(self.__WB_MANIFEST);
 
 // https://developers.google.com/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate
 registerRoute(({ request }) => true, new StaleWhileRevalidate({}));
+
+// @ts-ignore
+self.addEventListener('message', (ev: MessageEvent) => {
+  console.log('received event', ev);
+  if (ev.data === 'skipWaiting') {
+    // @ts-ignore
+    self.skipWaiting();
+  }
+});
