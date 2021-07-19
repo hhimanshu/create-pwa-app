@@ -1,5 +1,5 @@
 .notificationContainer {
-  background-color: var(--black);
+  background-color: var(--gray-200);
   width: 100%;
   padding: 5px 0;
   bottom: 0;
@@ -8,20 +8,22 @@
 
 .softwareUpdateNotificationContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .softwareUpdateNotificationContainer > p {
-  color: var(--white);
-  margin: 10px;
+  color: var(--black);
+  margin: 15px;
 }
 
 .softwareUpdateNotificationContainer > button {
-  border: 1px solid var(--white);
-  color: var(--white);
-  background-color: var(--black);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px 0;
   cursor: pointer;
+  color: var(--white);
+  font-weight: bold;
+  background-color: var(--black);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px 10px;
 }
