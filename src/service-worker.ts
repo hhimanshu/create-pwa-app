@@ -16,8 +16,8 @@ precacheAndRoute(self.__WB_MANIFEST);
 registerRoute(({ request }) => true, new StaleWhileRevalidate({}));
 
 self.addEventListener('message', (ev: MessageEvent) => {
-  console.log('received event', ev);
   if (ev.data === 'skipWaiting') {
+    console.log('applying new software changes ...');
     self.skipWaiting();
   }
 });
