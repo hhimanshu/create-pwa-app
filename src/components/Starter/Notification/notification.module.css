@@ -1,26 +1,26 @@
 .notificationContainer {
-    background-color: var(--black);
-    width: 100%;
-    padding: 5px 0;
-    bottom: 0;
-    position: fixed;
+  background-color: var(--black);
+  width: 100%;
+  padding: 5px 0;
+  bottom: 0;
+  position: fixed;
 }
 
 .softwareUpdateNotificationContainer {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .softwareUpdateNotificationContainer > p {
-    color: var(--white);
-    margin: 10px;
+  color: var(--white);
+  margin: 10px;
 }
 
 .softwareUpdateNotificationContainer > button {
-    border: 1px solid var(--white);
-    color: var(--white);
-    background-color: var(--black);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px 0;
+  border: 1px solid var(--white);
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
 }
