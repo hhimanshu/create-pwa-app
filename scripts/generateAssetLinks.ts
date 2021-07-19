@@ -13,16 +13,14 @@ if (!(appName && fingerPrint))
     'Either PWA_PACKAGE_NAME or PWA_SHA256_FINGERPRINT is missing in .env'
   );
 const assetLinksJson = [
-  [
-    {
-      relation: ['delegate_permission/common.handle_all_urls'],
-      target: {
-        namespace: 'android_app',
-        package_name: appName,
-        sha256_cert_fingerprints: [fingerPrint],
-      },
+  {
+    relation: ['delegate_permission/common.handle_all_urls'],
+    target: {
+      namespace: 'android_app',
+      package_name: appName,
+      sha256_cert_fingerprints: [fingerPrint],
     },
-  ],
+  },
 ];
 fs.promises
   .mkdir('dist/.well-known', { recursive: true })
