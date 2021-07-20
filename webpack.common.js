@@ -20,7 +20,7 @@ module.exports = {
       ],
     }),
     new InjectManifest({
-      swSrc: './src/service-worker.ts',
+      swSrc: './src/serviceworker/service-worker.ts',
     }),
   ],
   output: {
