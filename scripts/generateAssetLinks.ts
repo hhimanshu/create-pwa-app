@@ -6,28 +6,30 @@ const fs = require('fs');
 const path = require('path');
 
 const appName = process.env.PWA_PACKAGE_NAME;
-const fingerPrint = process.env.PWA_SHA256_FINGERPRINT;
+const fingerPrints: string[] = process.env.PWA_SHA256_FINGERPRINTS.split(',');
 
-if (!(appName && fingerPrint))
+if (!appName || fingerPrints.length < 1)
   throw Error(
-    'Either PWA_PACKAGE_NAME or PWA_SHA256_FINGERPRINT is missing in .env'
+    'Either PWA_PACKAGE_NAME or PWA_SHA256_FINGERPRINTS is missing in .env'
   );
-const assetLinksJson = [
-  {
-    relation: ['delegate_permission/common.handle_all_urls'],
-    target: {
-      namespace: 'android_app',
-      package_name: appName,
-      sha256_cert_fingerprints: [fingerPrint],
-    },
+const getAssetLink = (fingerprint: string) => ({
+  relation: ['delegate_permission/common.handle_all_urls'],
+  target: {
+    namespace: 'android_app',
+    package_name: appName,
+    sha256_cert_fingerprints: [fingerprint],
   },
-];
+});
+
+const getAssetLinksJson = () =>
+  fingerPrints.map(fingerprint => getAssetLink(fingerprint));
+
 fs.promises
   .mkdir('dist/.well-known', { recursive: true })
   .then((path: string) => {
     fs.writeFile(
       `${path}/assetlinks.json`,
-      JSON.stringify(assetLinksJson, null, 2),
+      JSON.stringify(getAssetLinksJson(), null, 2),
       { flag: 'w' },
       (err: ErrnoException) => {
         if (err) {
