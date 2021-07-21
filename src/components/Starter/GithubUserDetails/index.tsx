@@ -13,7 +13,7 @@ export const GithubUserDetails = ({
 }: GithubUserDetailsProps) => (
   <div className={styles.userDetailsContainer}>
     <div className={styles.userDetails}>
-      <h1>{name}</h1>
+      <h2>{name}</h2>
       <p>@{userName}</p>
       <div className={styles.followButton}>
         <FollowButton userName={userName} />

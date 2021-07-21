@@ -8,13 +8,13 @@
   align-items: center;
 }
 
-.userDetails > h1,
+.userDetails > h2,
 h3 {
   margin: 0;
 }
 
 .userDetails > p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   margin: 6px 0;
   color: var(--gray);

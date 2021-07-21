@@ -19,6 +19,7 @@ export const useSoftwareUpdate = (): SoftwareUpdateType => {
         }
       });
     };
+    // todo: install SW based on an env variable?
     if ((sw && process.env.NODE_ENV === 'production') || true) {
       window.addEventListener('load', () => {
         sw.register('/service-worker.js')

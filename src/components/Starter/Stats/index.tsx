@@ -8,7 +8,7 @@ interface StatProps {
 
 export const Stat = ({ value, label }: StatProps) => (
   <div className={styles.numericContainer}>
-    <h3>{value}</h3>
+    <h4>{value}</h4>
     <p>{label}</p>
   </div>
 );
