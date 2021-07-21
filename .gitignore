@@ -6,3 +6,8 @@ storybook-static/
 *.DS_Store
 yarn-error.log
 *.env
+
+# Exclude output of bubblewrap except twa-manifest file
+# also excluded android.keystore since this contains sensitive information. Back it up somewhere else
+pwa/*
+!pwa/twa-manifest.json

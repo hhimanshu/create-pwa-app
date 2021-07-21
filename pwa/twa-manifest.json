@@ -1,0 +1,39 @@
+{
+  "packageId": "app.vercel.react_pwa_starter.twa",
+  "host": "react-pwa-starter.vercel.app",
+  "name": "React PWA Starter",
+  "launcherName": "PWA Starter",
+  "display": "standalone",
+  "themeColor": "#FFFFFF",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#000000",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://react-pwa-starter.vercel.app/icon_x512.png",
+  "maskableIconUrl": "https://react-pwa-starter.vercel.app/icon_x512.png",
+  "monochromeIconUrl": "https://react-pwa-starter.vercel.app/icon_x512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "/Users/hhimanshu/code/prsnl/ts/react-pwa-starter/pwa/android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "2",
+  "appVersionCode": 2,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://react-pwa-starter.vercel.app/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "appVersion": "2"
+}
