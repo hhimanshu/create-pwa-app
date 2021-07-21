@@ -18,7 +18,7 @@ export const GithubCard = ({ githubUser }: GithubCardProps) => {
         <Avatar
           userName={githubUser.name}
           url={githubUser.avatar_url}
-          height={100}
+          height={120}
         />
         <GithubUserDetails name={githubUser.name} userName={githubUser.login} />
         <Stats
