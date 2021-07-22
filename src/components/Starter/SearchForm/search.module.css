@@ -9,7 +9,6 @@
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   font-family: 'Rubik', serif;
-  font-size: 18px;
   font-weight: 300;
 
   grid-row-start: 4;
@@ -24,7 +23,7 @@
   background: var(--black);
   color: var(--white);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 8px;
   cursor: pointer;
