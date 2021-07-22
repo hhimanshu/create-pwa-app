@@ -3,15 +3,20 @@ import styles from './follow.module.css';
 import GithubIcon from '../../../icons/github.svg';
 
 interface FollowButtonProps {
-  userName: string;
+  userOrRepo: string;
+  label?: string;
 }
 
-export const FollowButton = ({ userName }: FollowButtonProps) => {
-  const onClick = () => window.open(`https://github.com/${userName}`, '_blank');
+export const FollowButton = ({
+  userOrRepo,
+  label = 'Follow',
+}: FollowButtonProps) => {
+  const onClick = () =>
+    window.open(`https://github.com/${userOrRepo}`, '_blank');
   return (
     <div className={styles.follow} onClick={onClick}>
       <GithubIcon />
-      <p>Follow</p>
+      <p>{label}</p>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './header.module.css';
 import MenuIcon from '../../../icons/menu.svg';
 import LogoIcon from '../../../icons/logo.svg';
+import { useHistory } from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -13,8 +14,12 @@ export const Header = () => {
 };
 
 const Menu = () => {
+  const history = useHistory();
   return (
-    <div className={styles.menuContainer}>
+    <div
+      className={styles.menuContainer}
+      onClick={() => history.push('/about')}
+    >
       <MenuIcon />
     </div>
   );

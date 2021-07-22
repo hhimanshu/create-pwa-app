@@ -16,7 +16,7 @@ export const GithubUserDetails = ({
       <h2>{name}</h2>
       <p>@{userName}</p>
       <div className={styles.followButton}>
-        <FollowButton userName={userName} />
+        <FollowButton userOrRepo={userName} />
       </div>
     </div>
   </div>
