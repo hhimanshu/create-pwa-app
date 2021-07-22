@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppShell } from '../AppShell';
 import styles from './about.module.css';
-import BonsaiiLabsLogo from '../../../icons/bonsaiilabs.png';
+import BonsaiiLabsImage from '../../../icons/bonsaiilabs.png';
 import { FollowButton } from '../FollowButton';
 
 export const About = () => {
@@ -13,7 +13,7 @@ export const About = () => {
           <div className={styles.aboutCard}>
             <img
               alt='bonsaiilabs'
-              src={BonsaiiLabsLogo}
+              src={BonsaiiLabsImage}
               height={50}
               width={50}
             />
