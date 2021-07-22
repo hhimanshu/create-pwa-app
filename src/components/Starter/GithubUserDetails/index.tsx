@@ -7,16 +7,13 @@ interface GithubUserDetailsProps {
   userName: string;
 }
 
-export const GithubUserDetails = ({
-  name,
-  userName,
-}: GithubUserDetailsProps) => (
+export const GithubUserDetails = ({ name, userName }: GithubUserDetailsProps) => (
   <div className={styles.userDetailsContainer}>
     <div className={styles.userDetails}>
       <h2>{name}</h2>
       <p>@{userName}</p>
       <div className={styles.followButton}>
-        <FollowButton userName={userName} />
+        <FollowButton userOrRepo={userName} />
       </div>
     </div>
   </div>
