@@ -2,6 +2,7 @@
   margin: 10px;
   display: grid;
   grid-template-rows: 55px 1fr auto;
+  border: 0px solid blue;
 }
 
 .offlineResults > h3 {
@@ -25,12 +26,6 @@
   margin-left: 4%;
 }
 
-.offlineIconContainer {
-  height: 10px;
-  width: auto;
-  border: 1px solid black;
-}
-
 .refresh {
   background: #000000;
   color: #ffffff;
@@ -43,5 +38,5 @@
 
 .offlineResultsContainer {
   border: 0px solid black;
-  margin-top: 16px;
+  margin-bottom: 46px;
 }

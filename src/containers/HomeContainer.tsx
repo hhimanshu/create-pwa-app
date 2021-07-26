@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppShell } from '../components/Starter/AppShell';
-import { Home } from '../components/Starter/Home';
 import { OfflineResults } from '../components/Starter/OfflineResults';
+import { Home } from '../components/Starter/Home';
 
 export const HomeContainer = () => {
   return (
