@@ -38,5 +38,6 @@
 
 .offlineResultsContainer {
   border: 0px solid black;
+  margin-top: 16px;
   margin-bottom: 46px;
 }
