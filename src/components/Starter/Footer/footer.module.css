@@ -1,0 +1,12 @@
+.footerContainer {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  border: 0px solid black;
+}

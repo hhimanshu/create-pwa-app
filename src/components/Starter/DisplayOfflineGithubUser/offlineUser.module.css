@@ -2,10 +2,14 @@
   display: flex;
   justify-content: center;
   border-radius: 4px;
-  border: 1px solid #c8c8c8;
+  border: 0px solid #c8c8c8;
   width: 100%;
   padding: 24px 0;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footerContainer {
+  position: relative;
 }
 
 .offlineGithubUserContainer {
@@ -14,7 +18,7 @@
 
 .offlineGithubUserContainer > h3 {
   font-size: 16px;
-  margin-bottom: 4px;
+  margin: 0;
 }
 
 .offlineGithubUserContainer > p,
@@ -38,6 +42,8 @@
 
 .offlineStat > h3 {
   margin-right: 8px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .offlineStat:first-child {

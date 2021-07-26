@@ -2,6 +2,7 @@ import React, { Fragment, ReactNode } from 'react';
 import { Header } from '../Header';
 import { useSoftwareUpdate } from '../../../serviceworker/hooks';
 import { SoftwareUpdateNotification } from '../Notification';
+import { Footer } from '../Footer';
 
 interface AppShellProps {
   children: ReactNode | ReactNode[];
@@ -19,6 +20,7 @@ export const AppShell = ({ children }: AppShellProps) => {
       {isUpdateAvailable && (
         <SoftwareUpdateNotification onClick={onButtonClick} />
       )}
+      <Footer />
     </Fragment>
   );
 };
