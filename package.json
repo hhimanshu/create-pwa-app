@@ -14,7 +14,7 @@
     "create:start:prod": "yarn build && yarn start:prod",
     "lint": "eslint -c .eslintrc.js --ext .ts src",
     "format": "prettier --write .",
-    "postinstall": "husky install",
+    "postinstall": "npx husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "semantic-release": "semantic-release"
