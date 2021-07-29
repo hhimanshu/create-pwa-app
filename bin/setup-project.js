@@ -21,7 +21,8 @@ if (!repoName) {
 const COMMANDS = {
   gitCheckoutCommand: `git clone --depth 1 git@github.com:hhimanshu/create-pwa-app.git ${repoName}`,
   installDepsCommand: `cd ${repoName} && yarn install`,
-  initializeGit: `cd ${repoName} && rm -rf .git && git init && git add . && git commit -m "initial commit"`
+  initializeGit: `cd ${repoName} && rm -rf .git && git init && git add . && git commit -q -m "initial commit"`,
+  removeFiles: `cd ${repoName} && rm -f pwa/twa-manifest.json`
 };
 
 console.log(`Cloning the repository with name ${repoName}`);
@@ -31,6 +32,9 @@ if (!checkedOut) process.exit(-1);
 console.log(`Installing dependencies for ${repoName}`);
 const installedDeps = runCommand(COMMANDS.installDepsCommand);
 if (!installedDeps) process.exit(-1);
+
+const projectSetup = runCommand(COMMANDS.removeFiles)
+if (!projectSetup) process.exit(-1);
 
 console.log(`Initializing git for ${repoName}`);
 const initializedGit = runCommand(COMMANDS.initializeGit);
