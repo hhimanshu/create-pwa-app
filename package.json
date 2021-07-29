@@ -2,7 +2,7 @@
   "name": "@bonsaiilabs/create-pwa-app",
   "version": "0.0.0-development",
   "description": "A React Starter to develop Progressive Web Applications (PWA) and deploy to Google Play Store",
-  "private": true,
+  "bin": "./bin/setup-project.js",
   "scripts": {
     "test": "jest --config jest.config.ts",
     "test:watch": "jest --watchAll --config jest.config.ts",
