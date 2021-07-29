@@ -1,13 +1,12 @@
 {
-  "name": "create-react-ts-starter",
+  "name": "@bonsaiilabs/create-pwa-app",
   "version": "1.0.0",
-  "description": "A React Starter from scratch using TypeScript, Webpack, Jest, React Testing Library, Storybook, Prettier, ESLint, and GitHub Actions.",
+  "description": "A React Starter to develop Progressive Web Applications (PWA) and deploy to Google Play Store",
   "private": true,
   "scripts": {
     "test": "jest --config jest.config.ts",
     "test:watch": "jest --watchAll --config jest.config.ts",
-    "dev": "webpack --config webpack.dev.config.js",
-    "start": "webpack serve --open --config webpack.dev.js ",
+    "start": "webpack serve --config webpack.dev.js ",
     "start:prod": "npx -y serve -s dist",
     "build": "rm -rf dist && webpack --config webpack.prod.js",
     "generateAssetLinks": "ts-node scripts/generateAssetLinks.ts",
@@ -21,9 +20,17 @@
   },
   "repository": {
     "type": "git",
-    "url": " https://github.com/hhimanshu/create-react-ts-starter"
+    "url": "https://github.com/hhimanshu/create-pwa-app"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "reactjs",
+    "typescript",
+    "progressive web app",
+    "pwa",
+    "google play",
+    "serviceworker"
+  ],
   "author": "Harit Himanshu",
   "license": "MIT",
   "devDependencies": {
