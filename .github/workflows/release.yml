@@ -18,7 +18,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install deps
-        uses: yarn install
+        run: yarn install
 
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2
