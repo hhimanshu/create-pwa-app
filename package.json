@@ -1,13 +1,12 @@
 {
-  "name": "create-react-ts-starter",
-  "version": "1.0.0",
-  "description": "A React Starter from scratch using TypeScript, Webpack, Jest, React Testing Library, Storybook, Prettier, ESLint, and GitHub Actions.",
+  "name": "@bonsaiilabs/create-pwa-app",
+  "version": "0.0.0-development",
+  "description": "A React Starter to develop Progressive Web Applications (PWA) and deploy to Google Play Store",
   "private": true,
   "scripts": {
     "test": "jest --config jest.config.ts",
     "test:watch": "jest --watchAll --config jest.config.ts",
-    "dev": "webpack --config webpack.dev.config.js",
-    "start": "webpack serve --open --config webpack.dev.js ",
+    "start": "webpack serve --config webpack.dev.js ",
     "start:prod": "npx -y serve -s dist",
     "build": "rm -rf dist && webpack --config webpack.prod.js",
     "generateAssetLinks": "ts-node scripts/generateAssetLinks.ts",
@@ -17,13 +16,22 @@
     "format": "prettier --write .",
     "postinstall": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": " https://github.com/hhimanshu/create-react-ts-starter"
+    "url": "https://github.com/hhimanshu/create-pwa-app"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "reactjs",
+    "typescript",
+    "progressive web app",
+    "pwa",
+    "google play",
+    "serviceworker"
+  ],
   "author": "Harit Himanshu",
   "license": "MIT",
   "devDependencies": {
@@ -70,7 +78,8 @@
     "workbox-precaching": "^6.1.5",
     "workbox-routing": "^6.1.5",
     "workbox-strategies": "^6.1.5",
-    "workbox-webpack-plugin": "^6.1.5"
+    "workbox-webpack-plugin": "^6.1.5",
+    "semantic-release": "^17.4.4"
   },
   "dependencies": {
     "@fontsource/rubik": "^4.5.0",
@@ -78,5 +87,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
