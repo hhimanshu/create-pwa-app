@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process');
+const fs = require('fs');
 
 const runCommand = command => {
   try {
@@ -27,14 +28,34 @@ const COMMANDS = {
 
 console.log(`Cloning the repository with name ${repoName}`);
 const checkedOut = runCommand(COMMANDS.gitCheckoutCommand);
-if (!checkedOut) process.exit(-1);
+if (!checkedOut) {
+  console.error(`Failed to clone the repository`);
+  process.exit(-1);
+}
 
 console.log(`Installing dependencies for ${repoName}`);
 const installedDeps = runCommand(COMMANDS.installDepsCommand);
-if (!installedDeps) process.exit(-1);
+if (!installedDeps) {
+  console.error(`Failed to install the dependencies`);
+  process.exit(-1);
+}
 
 const projectSetup = runCommand(COMMANDS.removeFiles);
-if (!projectSetup) process.exit(-1);
+if (!projectSetup) {
+  console.error(`Failed to prepare the newly created repository`);
+  process.exit(-1);
+}
+
+const updatePackageJson = () => {
+  const commands = `
+  cd ${repoName} && \
+  npx -y npm@latest pkg set name=${repoName} && \
+  npx -y npm@latest pkg delete author && \
+  npx -y npm@latest pkg delete repository.url
+  `;
+  runCommand(commands);
+};
+updatePackageJson();
 
 console.log(`Initializing git for ${repoName}`);
 const initializedGit = runCommand(COMMANDS.initializeGit);
