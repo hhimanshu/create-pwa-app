@@ -17,6 +17,7 @@ module.exports = {
       patterns: [
         { from: 'src/manifest.json', to: './' },
         { from: 'src/icons/manifest', to: './' },
+        { from: 'src/icons/favicons', to: './' },
       ],
     }),
     new InjectManifest({
