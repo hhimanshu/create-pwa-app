@@ -37,7 +37,7 @@ const ensurePreRequisitesMet = () => {
   const isYarnInstalled = () => {
     try {
       const output = execSync('yarn -v').toString();
-      console.log(`yarn version ${output} is installed`);
+      console.log(`yarn version installed: ${output} `);
       return true;
     } catch (e) {
       console.error(
