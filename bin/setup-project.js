@@ -6,7 +6,7 @@ const runCommand = command => {
   try {
     execSync(`${command}`, { stdio: 'inherit' });
   } catch (e) {
-    console.error('Failed to execute ${command}', e);
+    console.error(`Failed to execute ${command}`, e);
     return false;
   }
   return true;
@@ -49,13 +49,15 @@ if (!projectSetup) {
 const updatePackageJson = () => {
   const commands = `
   cd ${repoName} && \
-  npx -y npm@latest pkg set name=${repoName} && \
-  npx -y npm@latest pkg delete author && \
-  npx -y npm@latest pkg delete repository.url
+  npm pkg set name=${repoName} author=" " repository.url=" "
   `;
-  runCommand(commands);
+  return runCommand(commands);
 };
-updatePackageJson();
+let updatedPackageJson = updatePackageJson();
+if (!updatedPackageJson) {
+  console.error(`Failed to update package.json for your repository`);
+  process.exit(-1);
+}
 
 console.log(`Initializing git for ${repoName}`);
 const initializedGit = runCommand(COMMANDS.initializeGit);

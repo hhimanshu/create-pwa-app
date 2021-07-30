@@ -1,3 +1,5 @@
+### Pre-requisites
+- Requires npm version `>= 7.2.0`. Install the latest npm using command `npm install -g npm@latest`.
 ### What it contains
 - ReactJS support with TypeScript
 - Testing support using Jest and React Testing Library
