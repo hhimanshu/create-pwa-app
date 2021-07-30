@@ -12,6 +12,46 @@ const runCommand = command => {
   return true;
 };
 
+const ensurePreRequisitesMet = () => {
+  const isValidNpmVersion = () => {
+    try {
+      const [major, minor, patch] = execSync('npm -v').toString().split('.');
+      let majorNumber = Number(major);
+      let minorNumber = Number(minor);
+      if (majorNumber > 7) return true;
+      if (majorNumber === 7 && minorNumber >= 20) return true;
+
+      console.log(`npm version used = ${major}.${minor}.${patch}`);
+      console.log(`required npm version >= 7.20.0`);
+      console.log(
+        `Please install latest npm using 'npm install -g npm@latest' to continue with this starter app.`
+      );
+    } catch (e) {
+      console.error(
+        `npm doesn't seem to be installed. Please install latest npm using 'npm install -g npm@latest' to continue with this starter app.`
+      );
+    }
+    return false;
+  };
+
+  const isYarnInstalled = () => {
+    try {
+      const output = execSync('yarn -v').toString();
+      console.log(`yarn version ${output} is installed`);
+      return true;
+    } catch (e) {
+      console.error(
+        `Yarn is not installed. Please install Yarn using https://classic.yarnpkg.com/en/docs/install in order to use the starter app.`
+      );
+    }
+    return false;
+  };
+
+  return isValidNpmVersion() && isYarnInstalled();
+};
+const preRequisitesMet = ensurePreRequisitesMet();
+if (!preRequisitesMet) process.exit(-1);
+
 const repoName = process.argv[2];
 if (!repoName) {
   console.log('error: please provide name for your project');
