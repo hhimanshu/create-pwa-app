@@ -1,5 +1,5 @@
 ### Pre-requisites
-- Requires npm version `>= 7.2.0`. Install the latest npm using command `npm install -g npm@latest`.
+- Requires npm version `>= 7.20.0`. Install the latest npm using command `npm install -g npm@latest`.
 - Requires `yarn`.
 
 ### What it contains
