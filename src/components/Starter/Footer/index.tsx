@@ -4,8 +4,12 @@ import styles from './footer.module.css';
 
 export const Footer = () => {
   return (
-    <div className={styles.footerContainer}>
+    <a
+      className={styles.footerContainer}
+      href='https://vercel.com/?utm_source=bonsaiilabs&utm_campaign=oss'
+      target={'_blank'}
+    >
       <VercelIcon />
-    </div>
+    </a>
   );
 };
