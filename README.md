@@ -1,3 +1,4 @@
+> The app is available on [Play Store](https://play.google.com/store/apps/details?id=app.vercel.react_pwa_starter.twa)
 ### Pre-requisites
 - Requires npm version `>= 7.20.0`. Install the latest npm using command `npm install -g npm@latest`.
 - Requires `yarn`.
